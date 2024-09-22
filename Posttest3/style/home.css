@@ -120,7 +120,7 @@ nav div a {
 
 /* Section Intro */
 .intro {
-  background-image: url('/Posttest3/assets/wallpaper3.jpg');
+  background-image: url('wallpaper3.jpg');
   background-size: cover;
   background-position: center top;
   width: 100%;
