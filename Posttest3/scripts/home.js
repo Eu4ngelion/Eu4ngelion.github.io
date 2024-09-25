@@ -26,3 +26,6 @@ hamburgerButton.addEventListener('click', function() {
         navlinks .classList.remove('show');
     }
 });
+
+// Pop-UP Welcome Message
+alert('Welcome to the website!');
