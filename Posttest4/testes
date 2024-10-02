@@ -1,0 +1,14 @@
+<div id="login-popup" class="popup">
+    <div class="popup-content">
+        <span class="close" id="close-login">&times;</span>
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username"><b>Username:</b></label><br>
+            <input type="text" id="username" name="username" required><br>
+            
+            <label for="password"><b>Password:</b></label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a id="register-link">Register</a></p>
+    </div>
