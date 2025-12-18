@@ -236,9 +236,18 @@
                             </div>
                         </a>
                     </div>
-                    <!-- Git, Render, OpenAPI, SwaggerUI, ReDoc, Docker, Canva, MS Word, Powerpoint, Excel -->
+                    <!-- React, Git, Render, OpenAPI, SwaggerUI, ReDoc, Docker, Canva, MS Word, Powerpoint, Excel -->
                     <p class="text-xs text-gray-400">And More...</p>
                     <div class="mt-2 mb-10 flex flex-wrap items-center justify-center space-x-4">
+                        <a href="https://react.dev/" target="blank">
+                            <img
+                                src="./assets/icons/React-icon.svg"
+                                alt="Skill Icon"
+                                title="React"
+                                class="h-6 w-6 transition-transform duration-200 ease-in-out hover:scale-120 xl:h-10 xl:w-10"
+                                data-tooltip="React"
+                            />
+                        </a>
                         <a href="https://git-scm.com/" target="blank">
                             <img
                                 src="./assets/icons/git-logo.svg"
@@ -327,12 +336,60 @@
 
         <!-- Project  -->
         <section class="mx-40 mt-40 mb-30 flex flex-col items-center justify-start" id="project">
-            <hr class="mb-15 w-full border-1 border-orange-900" />
+            <hr class="mb-15 w-full border border-orange-900" />
             <div class="flex w-full flex-col items-center justify-start">
                 <h1 class="text-4xl font-bold text-orange-600">Projects</h1>
                 <p class="mt-2 text-base font-semibold text-gray-300">Explore my latest projects and accomplishments.</p>
 
                 <!-- Projects Card -->
+
+                <!-- Sentinel Card -->
+                 <div class="mb-5 flex w-full flex-col items-center justify-center">
+                    <div class="mt-5 flex h-75 items-center justify-center">
+                        <img src="./assets/image/sentinel.webp" alt="Project Image" class="h-full w-1/2 rounded-md bg-amber-200" />
+                        <div class="ml-5 flex h-full w-1/2 flex-col items-start justify-start">
+                            <div>
+                                <h2 class="flex items-end justify-between text-base font-bold text-white xl:text-2xl">
+                                    <a href="https://e-surat.tenginbaru.my.id/" target="_blank">
+                                        <span class="hover:text-orange-500 hover:underline">Project Sentinel</span>
+                                    </a>
+
+                                    <span class="xl:text:sm text-xs"> December 2025</span>
+                                </h2>
+                                <p class="mt-4 text-justify text-xs text-stone-400 xl:text-sm">
+                                    Predictive maintenance system for industrial machine with agentic chatbot AI and maintenance ticketing features, developed with react.js, postgreSQL, and fastAPI.
+                                </p>
+                            </div>
+                            <div class="flex h-full w-full flex-col items-start justify-end space-x-2">
+                                <div class="my-2 flex flex-row items-start justify-end space-x-2">
+                                    <img
+                                        src="./assets/icons/React-icon.svg"
+                                        alt="Skill Icon"
+                                        title="Next.js"
+                                        class="h-4 w-4 rounded-md transition-transform duration-200 ease-in-out hover:scale-120 xl:h-7 xl:w-7"
+                                        data-tooltip="Next.js"
+                                    />
+                                    <img
+                                        src="./assets/icons/tailwind-logo.svg"
+                                        alt="Skill Icon"
+                                        title="Tailwind CSS"
+                                        class="h-4 w-4 rounded-md transition-transform duration-200 ease-in-out hover:scale-120 xl:h-7 xl:w-7"
+                                        data-tooltip="Tailwind CSS"
+                                    />
+                                </div>
+                                <div class="items my-2 flex flex-row flex-wrap justify-start space-y-2 space-x-2">
+                                    <a href="https://sentinel.elghaz.my.id" target="_blank">
+                                        <button class="flex items-center rounded-md bg-stone-700 px-3 py-1 text-xs font-semibold text-white transition duration-200 ease-in-out hover:bg-orange-700">
+                                            <span class="mr-1 inline-block h-2 w-2 animate-[pulse_1.5s_infinite] justify-center rounded-full bg-green-500"></span>
+                                            Live Demo
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Esurat Card -->
                 <div class="mb-5 flex w-full flex-col items-center justify-center">
                     <div class="mt-5 flex h-75 items-center justify-center">
@@ -658,6 +715,7 @@
             </div>
         </section>
         <script>
+            const imagesSentinel = ["./assets/image/sentinel.webp", "./assets/image/sentinel2.webp", "./assets/image/sentinel3.webp"];
             const imagesESurat = ["./assets/image/eSurat-project.png", "./assets/image/eSurat-project2.png", "./assets/image/eSurat-project3.png"];
             const imagesRoomque = ["./assets/image/roomque-project.png", "./assets/image/roomque-project2.png", "./assets/image/roomque-project3.png"];
             const imagesKoruko = ["./assets/image/koruko-project.png", "./assets/image/koruko-project2.png", "./assets/image/koruko-project3.png"];
@@ -665,12 +723,14 @@
             const imagesBMI = ["./assets/image/bmi-project.png", "./assets/image/bmi-project2.png", "./assets/image/bmi-project3.png"];
 
             // Get the image element
+            const imageElementSentinel = document.querySelector('img[src="./assets/image/sentinel.webp"]');
             const imageElementEsurat = document.querySelector('img[src="./assets/image/eSurat-project.png"]');
             const imageElementRoomque = document.querySelector('img[src="./assets/image/roomque-project.png"]');
             const imageElementKoruko = document.querySelector('img[src="./assets/image/koruko-project.png"]');
             const imageElementHavenMedia = document.querySelector('img[src="./assets/image/haven-media-project.png"]');
             const imageElementBMI = document.querySelector('img[src="./assets/image/bmi-project.png"]');
 
+            let F = 0;
             let A = 0;
             let B = 0;
             let C = 0;
@@ -678,6 +738,11 @@
             let E = 0;
 
             // Function to change the image
+            function changeIamgeSentinel() {
+                F = (F + 1) % imagesSentinel.length;
+                imageElementSentinel.src = imagesSentinel[F];
+            }
+
             function changeImageEsurat() {
                 A = (A + 1) % imagesESurat.length;
                 imageElementEsurat.src = imagesESurat[A];
@@ -700,6 +765,7 @@
             }
 
             // Change the image every 3 seconds
+            setInterval(changeIamgeSentinel, 2000);
             setInterval(changeImageEsurat, 2000);
             setInterval(changeImageRoomque, 2000);
             setInterval(changeImageKoruko, 2000);
