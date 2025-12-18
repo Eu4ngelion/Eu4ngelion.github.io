@@ -10,24 +10,24 @@
     </head>
     <body class="font-poppins mx-4 bg-neutral-900 text-white sm:mx-10 md:mx-20">
         <header class="top-0 left-0 z-10 mb-10 flex w-full items-start justify-center pt-5 sm:sticky">
-            <ul class="flex flex-wrap items-center justify-center rounded-full border border-orange-500 bg-neutral-950">
+            <ul class="flex flex-wrap items-center justify-center gap-1 rounded-full border border-orange-500 bg-neutral-950 p-1">
                 <li class="">
                     <a href="#hero">
-                        <button class="flex items-center justify-center space-x-1 rounded-full px-3 py-1 transition duration-250 ease-in-out hover:bg-orange-600">
+                        <button class="flex min-h-[44px] items-center justify-center space-x-1 rounded-full px-4 py-2 transition duration-250 ease-in-out hover:bg-orange-600 sm:min-h-0 sm:py-1 sm:px-3">
                             <span class="text-sm font-semibold text-white">Home</span>
                         </button>
                     </a>
                 </li>
                 <li class="">
                     <a href="#about-me">
-                        <button class="flex items-center justify-center space-x-1 rounded-full px-3 py-1 transition duration-250 ease-in-out hover:bg-orange-600">
+                        <button class="flex min-h-[44px] items-center justify-center space-x-1 rounded-full px-4 py-2 transition duration-250 ease-in-out hover:bg-orange-600 sm:min-h-0 sm:py-1 sm:px-3">
                             <span class="text-sm font-semibold text-white">About Me</span>
                         </button>
                     </a>
                 </li>
                 <li class="">
                     <a href="#project">
-                        <button class="flex items-center justify-center space-x-1 rounded-full px-3 py-1 transition duration-250 ease-in-out hover:bg-orange-600">
+                        <button class="flex min-h-[44px] items-center justify-center space-x-1 rounded-full px-4 py-2 transition duration-250 ease-in-out hover:bg-orange-600 sm:min-h-0 sm:py-1 sm:px-3">
                             <span class="text-sm font-semibold text-white">Project</span>
                         </button>
                     </a>
@@ -36,7 +36,7 @@
         </header>
 
         <!-- Hero -->
-        <section class="mx-40 flex h-screen flex-col items-center justify-center pb-10 text-center" id="hero">
+        <section class="mx-4 md:mx-20 lg:mx-40 flex h-screen flex-col items-center justify-center pb-10 text-center" id="hero">
             <!-- Profile Picture + Name + Location -->
             <div class="mb-4 flex flex-row items-center justify-center space-x-4">
                 <img src="./assets/image/profile.jpeg" alt="Profile Picture" class="h-8 w-8 rounded-full xl:h-12 xl:w-12" />
@@ -51,7 +51,7 @@
 
             <!-- Main Text + Sub Text -->
             <div class="mb-5">
-                <h1 class="text-3xl font-bold xl:text-6xl">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold">
                     <span class="text-white">Web </span>
                     <span class="text-orange-600">Development & </span>
                     <br />
@@ -72,7 +72,7 @@
         </section>
 
         <!-- About Me -->
-        <section class="mx-40 flex flex-col items-center justify-start" id="about-me">
+        <section class="mx-4 md:mx-20 lg:mx-40 flex flex-col items-center justify-start" id="about-me">
             <hr class="w-full border-1 border-orange-900" />
             <div class="mt-10 flex min-h-4/5 w-full flex-col items-center justify-center">
                 <div class="flex flex-wrap-reverse items-center justify-center space-y-10 lg:flex-row lg:space-x-10 lg:text-start xl:space-x-30">
@@ -114,7 +114,7 @@
                     <h2 class="text-md mb-1 font-bold text-orange-600 md:text-2xl">Tech Stacks</h2>
                     <p class="mb-2 text-sm text-gray-400">These are the technologies I frequently work with or recently utilized.</p>
 
-                    <div class="my-2 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+                    <div class="my-2 grid grid-cols-2 gap-4 lg:grid-cols-3 xl:gap-x-8">
                         <!-- Skill Card -->
 
                         <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="blank">
@@ -335,7 +335,7 @@
         </section>
 
         <!-- Project  -->
-        <section class="mx-40 mt-40 mb-30 flex flex-col items-center justify-start" id="project">
+        <section class="mx-4 md:mx-20 lg:mx-40 mt-20 md:mt-40 mb-30 flex flex-col items-center justify-start" id="project">
             <hr class="mb-15 w-full border border-orange-900" />
             <div class="flex w-full flex-col items-center justify-start">
                 <h1 class="text-4xl font-bold text-orange-600">Projects</h1>
@@ -345,9 +345,9 @@
 
                 <!-- Sentinel Card -->
                  <div class="mb-5 flex w-full flex-col items-center justify-center">
-                    <div class="mt-5 flex h-75 items-center justify-center">
-                        <img src="./assets/image/sentinel.webp" alt="Project Image" class="h-full w-1/2 rounded-md bg-amber-200" />
-                        <div class="ml-5 flex h-full w-1/2 flex-col items-start justify-start">
+                    <div class="mt-5 flex w-full flex-col lg:flex-row h-auto lg:h-75 items-center justify-center">
+                        <img src="./assets/image/sentinel.webp" alt="Project Image" class="h-auto w-full lg:w-1/2 rounded-md bg-amber-200 object-cover lg:h-full" />
+                        <div class="ml-0 lg:ml-5 mt-4 lg:mt-0 flex h-full w-full lg:w-1/2 flex-col items-start justify-start">
                             <div>
                                 <h2 class="flex items-end justify-between text-base font-bold text-white xl:text-2xl">
                                     <a href="https://e-surat.tenginbaru.my.id/" target="_blank">
@@ -392,9 +392,9 @@
 
                 <!-- Esurat Card -->
                 <div class="mb-5 flex w-full flex-col items-center justify-center">
-                    <div class="mt-5 flex h-75 items-center justify-center">
-                        <img src="./assets/image/eSurat-project.png" alt="Project Image" class="h-full w-1/2 rounded-md bg-amber-200" />
-                        <div class="ml-5 flex h-full w-1/2 flex-col items-start justify-start">
+                    <div class="mt-5 flex w-full flex-col lg:flex-row h-auto lg:h-75 items-center justify-center">
+                        <img src="./assets/image/eSurat-project.png" alt="Project Image" class="h-auto w-full lg:w-1/2 rounded-md bg-amber-200 object-cover lg:h-full" />
+                        <div class="ml-0 lg:ml-5 mt-4 lg:mt-0 flex h-full w-full lg:w-1/2 flex-col items-start justify-start">
                             <div>
                                 <h2 class="flex items-end justify-between text-base font-bold text-white xl:text-2xl">
                                     <a href="https://e-surat.tenginbaru.my.id/" target="_blank">
@@ -447,9 +447,9 @@
 
                 <!-- Roomque Card -->
                 <div class="mb-5 flex w-full flex-col items-center justify-center">
-                    <div class="mt-5 flex h-75 items-center justify-center">
-                        <img src="./assets/image/roomque-project.png" alt="Project Image" class="h-full w-1/2 rounded-md bg-amber-200" />
-                        <div class="ml-5 flex h-full w-1/2 flex-col items-start justify-start">
+                    <div class="mt-5 flex w-full flex-col lg:flex-row h-auto lg:h-75 items-center justify-center">
+                        <img src="./assets/image/roomque-project.png" alt="Project Image" class="h-auto w-full lg:w-1/2 rounded-md bg-amber-200 object-cover lg:h-full" />
+                        <div class="ml-0 lg:ml-5 mt-4 lg:mt-0 flex h-full w-full lg:w-1/2 flex-col items-start justify-start">
                             <div>
                                 <h2 class="flex items-end justify-between text-base font-bold text-white xl:text-2xl">
                                     <a href="https://www.roomque.my.id" target="_blank">
@@ -508,9 +508,9 @@
 
                 <!-- Tukang Laundry Card -->
                 <div class="mb-5 flex w-full flex-col items-center justify-center">
-                    <div class="mt-5 flex h-75 items-center justify-center">
-                        <img src="./assets/image/tukanglaundry.png" alt="Project Image" class="h-full w-1/2 rounded-md bg-amber-200" />
-                        <div class="ml-5 flex h-full w-1/2 flex-col items-start justify-start">
+                    <div class="mt-5 flex w-full flex-col lg:flex-row h-auto lg:h-75 items-center justify-center">
+                        <img src="./assets/image/tukanglaundry.png" alt="Project Image" class="h-auto w-full lg:w-1/2 rounded-md bg-amber-200 object-cover lg:h-full" />
+                        <div class="ml-0 lg:ml-5 mt-4 lg:mt-0 flex h-full w-full lg:w-1/2 flex-col items-start justify-start">
                             <div>
                                 <h2 class="flex items-end justify-between text-base font-bold text-white xl:text-2xl">
                                     <a href="https://github.com/MatchaTi/Tukang-Laundry" target="blank">
@@ -559,9 +559,9 @@
 
                 <!-- BMI Calculator -->
                 <div class="mb-5 flex w-full flex-col items-center justify-center">
-                    <div class="mt-5 flex h-75 items-center justify-center">
-                        <img src="./assets/image/bmi-project.png" alt="Project Image" class="h-full w-1/2 rounded-md bg-amber-200" />
-                        <div class="ml-5 flex h-full w-1/2 flex-col items-start justify-start">
+                    <div class="mt-5 flex w-full flex-col lg:flex-row h-auto lg:h-75 items-center justify-center">
+                        <img src="./assets/image/bmi-project.png" alt="Project Image" class="h-auto w-full lg:w-1/2 rounded-md bg-amber-200 object-cover lg:h-full" />
+                        <div class="ml-0 lg:ml-5 mt-4 lg:mt-0 flex h-full w-full lg:w-1/2 flex-col items-start justify-start">
                             <div>
                                 <h2 class="flex items-end justify-between text-base font-bold text-white xl:text-2xl">
                                     <a href="https://github.com/Eu4ngelion/PA_Pemvis" target="_blank">
@@ -612,9 +612,9 @@
 
             <!-- Koruko Card -->
             <div class="mb-5 flex w-full flex-col items-center justify-center">
-                <div class="mt-5 flex h-75 items-center justify-center">
-                    <img src="./assets/image/koruko-project.png" alt="Koruko Project" class="h-full w-1/2 rounded-md bg-amber-200" />
-                    <div class="ml-5 flex h-full w-1/2 flex-col items-start justify-start">
+                <div class="mt-5 flex w-full flex-col lg:flex-row h-auto lg:h-75 items-center justify-center">
+                    <img src="./assets/image/koruko-project.png" alt="Koruko Project" class="h-auto w-full lg:w-1/2 rounded-md bg-amber-200 object-cover lg:h-full" />
+                    <div class="ml-0 lg:ml-5 mt-4 lg:mt-0 flex h-full w-full lg:w-1/2 flex-col items-start justify-start">
                         <div>
                             <h2 class="flex items-end justify-between text-base font-bold text-white xl:text-2xl">
                                 <a href="https://github.com/Eu4ngelion/Proyek_Koruko" target="_blank">
@@ -664,9 +664,9 @@
 
             <!-- Haven Media -->
             <div class="mb-5 flex w-full flex-col items-center justify-center">
-                <div class="mt-5 flex h-75 items-center justify-center">
-                    <img src="./assets/image/haven-media-project.png" alt="Koruko Project" class="h-full w-1/2 rounded-md bg-amber-200" />
-                    <div class="ml-5 flex h-full w-1/2 flex-col items-start justify-start">
+                <div class="mt-5 flex w-full flex-col lg:flex-row h-auto lg:h-75 items-center justify-center">
+                    <img src="./assets/image/haven-media-project.png" alt="Koruko Project" class="h-auto w-full lg:w-1/2 rounded-md bg-amber-200 object-cover lg:h-full" />
+                    <div class="ml-0 lg:ml-5 mt-4 lg:mt-0 flex h-full w-full lg:w-1/2 flex-col items-start justify-start">
                         <div>
                             <h2 class="flex items-end justify-between text-base font-bold text-white xl:text-2xl">
                                 <a href="https://github.com/itsukikunn/PA_PemWeb" target="_blank">
